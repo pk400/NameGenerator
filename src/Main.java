@@ -19,10 +19,8 @@ public class Main extends JPanel {
 	
 	public Main() {
 		super(new GridLayout(3,1));
-		
 		Random randFName = new Random();
 		Random randLName = new Random();
-		
 		for(int i = 0; i < 5; i++) {
 			int rfn = randFName.nextInt(6) + 0;
 			int rln = randLName.nextInt(7) + 0;
@@ -39,13 +37,11 @@ public class Main extends JPanel {
 				genName5 = new JLabel(fname[rfn] + " " + lname[rln]);
 			}
 		}
-
 		add(genName1);
 		add(genName2);
 		add(genName3);
 		add(genName4);
 		add(genName5);
-		
 	}
 
 
@@ -53,9 +49,7 @@ public class Main extends JPanel {
 		JFrame frame = new JFrame("Name Generator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setPreferredSize(new Dimension(500, 100));
-		
 		frame.add(new Main());
-		
 		frame.pack();
 		frame.setVisible(true);
 		
